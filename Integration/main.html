@@ -12,7 +12,7 @@
     
     
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Noto+Sans+Thai&family=PT+Serif&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Noto+Sans+Thai&family=PT+Serif&family=Ubuntu+Mono&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -93,10 +93,11 @@
     <div class="card2">
         
         <div class="Detail"></div>
-        <div class="integral_display"></div>
+        <div class="integral_display" id="display_integral"></div>
         <textarea rows="15" cols="40" type="text" id = "input_answer" class = "input_answer" placeholder="Input equation here with LaTex syntax. The final answer must be inside the \boxed{...} command. For example, I=\boxed{x^2}."></textarea>
         <button id = "refresher" class = "refresher">Generate \( \textrm{LaTeX} \) (Ctrl + Enter) </button>
         <button id = "submit_answer" >Submit</button>
+        <button id = "auto_fill" >Reset</button>
         <label class = "output">Whiteboard</label>
         <div class="grader">
             Failed<br>
