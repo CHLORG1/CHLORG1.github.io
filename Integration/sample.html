@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Math Expression Input</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.3/MathJax.js?config=TeX-MML-AM_SVG"></script>
+</head>
+<body>
+  <h1>Math Expression Input</h1>
+  <form id="expressionForm">
+    <label for="mathExpression">Enter Math Expression:</label>
+    <input type="text" id="mathExpression" name="mathExpression" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="submittedExpression"></div>
+
+  <script>
+    const expressionForm = document.getElementById('expressionForm');
+    expressionForm.addEventListener('submit', (event) => {
+      event.preventDefault(); // Prevent default form submission
+
+      const mathExpression = document.getElementById('mathExpression').value;
+      console.log('Submitted Math Expression:', mathExpression);
+
+      // Display the math expression using MathJax
+      const mathJaxElement = MathJax.tex2html(mathExpression);
+      const submittedExpressionDiv = document.getElementById('submittedExpression');
+      submittedExpressionDiv.innerHTML = mathJaxElement.innerHTML;
+    });
+  </script>
+</body>
+</html>

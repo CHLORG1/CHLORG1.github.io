@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Integration Bee</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link rel = "stylesheet" href = "title_card.css">
+    <link rel = "stylesheet" href = "progress_bar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Noto+Sans+Thai&family=PT+Serif&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+</script>
+</head>
+<body>
+
+<div class="Menu_bar"> 
+    <button class = "button_bar" onclick = "Open_tab(event, 'Home')"><span>Home</span></button>
+    <button class = "button_bar" onclick = "Open_tab(event, 'Tasks')"><span>Tasks</span></button>
+    <button class = "button_bar" id = "Tasks all" onclick = "Open_tab(event, 'Statistics')"><span>Submission</span></button>
+    <button class = "button_bar" onclick = "Open_tab(event, 'About')"><span>About</span></button>
+    <button class = "button_bar" onclick = "Open_tab(event, 'Login')" class="login"><span>Login</span></button>
+</div> <br>
+
+<div id="Home" class="tabcontent">
+    <div class="grid-container">
+        <div class="title"><FONT COLOR="white" size=25px>สำหรับคนที่ชอบการ Integration เป็นชีวิตจิตใจ</FONT><br><FONT COLOR=#e6f4b2>พบกับแหล่งรวมโจทย์ Integration ที่หลากหลาย
+        </FONT> 
+        </div>
+        <div class="subtitle">MWIT-KVIS Integration Bee Archive
+        </div>
+        <div class="action_button">
+        <button onclick = "Open_tab(event, 'Login')" class="Login"><span>Login</span></button>
+        <button onclick = "Open_tab(event, 'Tasks')" class="Tasks"><span>Integrate</span></button>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="Tasks" class="tabcontent">
+<!--heading-->
+<div class="card">
+    <div class="author">
+        <FONT COLOR="white">CATSODIUM</FONT>
+    </div>
+    <div class = "Solved">
+        Status
+    </div>
+    <div class="problem">
+        Problems
+    </div>
+    <div class="Tag">
+        0/8
+    </div>
+</div>
+<!--generate cards-->
+
+<script src="generate_integral.js"></script>
+
+<!--
+<div class="card" id = "card">
+    <div class="author">
+        Thitiwat Kosolpattanadurong <br>
+        <FONT COLOR="gray">0001</FONT>
+    </div>
+    <div class = "Solved">
+        Unsolved
+    </div>
+    <div class = "Tag">
+    <button>Submit</button>
+    </div>
+    <div class="problem">
+        \( \displaystyle\int \frac{\sqrt{\cot{x}}}{1+\sin{2x}} \, dx \)
+    </div>
+</div>
+-->
+</div>
+</div>
+</div>
+
+
+
+<div id="Statistics" class="tabcontent">
+    <div class="card2">
+        
+        <div class="Detail"></div>
+        <div class="integral_display"></div>
+        <textarea rows="15" cols="40" type="text" id = "input_answer" class = "input_answer" placeholder="Input equation here with LaTex syntax. The final answer must be inside the \boxed{...} command. For example, I=\boxed{x^2}."></textarea>
+        <button id = "refresher" class = "refresher">Generate \( \textrm{LaTeX} \) (Ctrl + Enter) </button>
+        <button id = "submit_answer" >Submit</button>
+        <label class = "output">Whiteboard</label>
+        <div class="grader">
+            Failed<br>
+            \( x = 15.67 \) <br>
+            <FONT COLOR="red">\( I = 0.500 \) </FONT> <br>
+            <FONT COLOR="green">\( I_0 = 0.333 \) </FONT>
+        </div>
+    </div>
+    
+</div>
+
+<script src="statistics.js"></script>
+<script src = "shortcuts.js"> </script>
+<script src="tab.js"></script>
+
+
+<div id="Login" class="tabcontent">
+    This is a text.
+</div>
+
+</body>
+</html>
