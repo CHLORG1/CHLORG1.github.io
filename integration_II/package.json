@@ -1,0 +1,19 @@
+{
+  "name": "init-integrate",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "compass-importer": "^0.4.1",
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "compass": "^0.1.1",
+    "nerdamer": "^1.1.13"
+  }
+}
