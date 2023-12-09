@@ -1,0 +1,263 @@
+body {
+	margin: 0;
+	font-family: 'Ubuntu Mono','monospace';
+	background:black;
+	position: relative;
+	overflow-y: auto;
+	color:white;
+	overflow-x:hidden;
+	
+	
+}
+
+  a {
+	color:white;
+  }
+
+  /* header */
+  
+  .header {
+	background-color: #0f0f0f;
+	box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	color:white;
+	font-size: 1.4em;
+	font-family: 'Ubuntu Mono', monospace;
+  }
+  
+  .header ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+	background-color:  #0f0f0f;
+  }
+  
+  .header li a {
+	display: block;
+	padding: 20px 20px;
+	border-right: 1px solid  #0f0f0f;
+	text-decoration: none;
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+	background-color:  #5b5b5b;
+	color: rgb(195, 195, 195);
+	transition:0.2s;
+  }
+  
+  .header .logo {
+	display: block;
+	float: left;
+	font-size: 1.5em;
+	padding: 10px 20px;
+	text-decoration: none;
+	
+  }
+  
+  /* menu */
+  
+  .header .menu {
+	clear: both;
+	max-height: 0;
+	transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+	padding: 28px 20px;
+	position: relative;
+	user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+	background: #333;
+	display: block;
+	height: 2px;
+	position: relative;
+	transition: background .2s ease-out;
+	width: 18px;
+	display: flex;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+	background: #333;
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+	transition: all .2s ease-out;
+	width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+	top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+	top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+	display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+	max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+	background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+	transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+	transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+	top: 0;
+  }
+  
+  /* 48em = 768px */
+  
+  @media (min-width: 48em) {
+	.header li {
+	  float: left;
+	}
+	.header li a {
+	  padding: 20px 30px;
+	}
+	.header .menu {
+	  clear: none;
+	  float: right;
+	  max-height: none;
+	}
+	.header .menu-icon {
+	  display: none;
+	}
+  }
+  
+.wrapper{
+    color:white;
+	z-index:-1;
+    align-items: center;
+	width: 100vw;
+	
+	height: 100vh;
+}
+.titlecard{
+	color:rgb(255, 255, 255);
+	z-index:0;
+	font-family: 'Ubuntu Mono', monospace;
+	text-align: center;
+	top: 30vh;
+	min-height: 60vh;
+	width:100vw;
+	position:relative;
+	display:grid;
+	grid-template-areas:"stack";
+	
+}
+
+.titlecard > * {
+	grid-area: stack;
+	position:relative;
+	animation-name: parallax;
+	animation-duration: 1ms;
+	animation-timeline: scroll();
+	
+}
+.title{
+	--parallax-speed: 20;
+	z-index:3;
+	font-size: 3.5em;
+	margin: 0 auto;
+	white-space: nowrap;
+	overflow: hidden; 
+	
+	animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+  }
+@keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: orange; }
+	
+}  
+
+.subtitle{
+	
+	--parallax-speed: 50;
+	z-index:2;
+	font-size: 1.5em;
+	translate: 0 20vh;
+}
+.subsubtitle{
+	
+	--parallax-speed: 10;
+	z-index:2;
+	font-size: 1.5em;
+	translate: 0 100vh;
+}
+
+@keyframes parallax {
+	to {
+		transform: translateY(calc(var(--parallax-speed)*(10px)));
+		
+	}
+}
+.h_button{
+	font-family: 'Ubuntu Mono', monospace;
+	background:inherit;
+	color:white;
+	border: 0px;
+	padding: 12px 25px;
+	border-radius: 15px;
+	font-size: 1.0em;
+	margin-top: 10px;
+	margin-left: 5px;
+	transition: 0.2s;
+}
+.h_button:hover{
+	background:linear-gradient(200deg,rgb(208, 208, 208), #b1b1b1);
+	color:black;
+	cursor: pointer;
+}
+/*calc(var(--parallax-speed)*/
+.c_side{
+    padding: 10px 10px;
+    width:90%;
+    margin: 1px 10px;
+    height:max-content;
+    text-align: center;
+    background:inherit;
+    color:white;
+    border:none;
+    font-family: 'Ubuntu Mono', monospace;
+    transition: 0.2s;
+    border-radius: 10px;
+    font-size:1em;
+}
+.c_side:hover{
+    background:grey;
+}

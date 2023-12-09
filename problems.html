@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Init_Integration</title>
+    <link rel = "stylesheet" href = "menubar.css">
+    <link rel = "stylesheet" href = "problem_card.css">
+    <!--title-->
+    <!--fonts-->
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Noto+Sans+Thai&family=PT+Serif&family=Ubuntu+Mono&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+<!-- Navigation -->
+<header class="header">
+<a href="" class="logo">Init_Integrate</a>
+<input class="menu-btn" type="checkbox" id="menu-btn" />
+<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+<ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="problems.html">Problems</a></li>
+    <li><a href="submission.html">Submission</a></li>
+    <li><a href="#Statistics">Statistics</a></li>
+    <li><a href="#About">About</a></li>
+    <li><a href="#Login">Login</a></li>
+</ul>
+</header>
+<div class="main_wrapper">
+    <div id="l_content" class="tabcontent">
+        <button class="c_side" id="Tag_all">All</button>
+        <button class="c_side" id="Tag_all">Tried</button>
+        <button class="c_side" id="Tag_all">Solved</button>
+        <button class="c_side" id="Tag_all">Bookmarked</button>
+        <hr>
+        <h3>Solved: 0/8</h3>
+        <hr>
+        <h3>Filters</h3>
+        
+        <div class="filter_wrap">
+            <div class="filter_button">U-sub</div>
+            <div class="filter_button">By parts</div>
+            <div class="filter_button">Trig-sub</div>
+            <div class="filter_button">Partial fraction</div>
+            <div class="filter_button">Feynmann</div>
+            <div class="filter_button">Ad-hoc</div>
+        </div>
+        <hr>
+
+    </div>
+    <div id="Tasks" class="tabcontent">
+    <!--heading-->
+    <div class="card">
+        <div class = "Solved">
+            Status
+        </div>
+        <div class="problem">
+            Problems
+        </div>
+        <div class="Tag">
+            
+        </div>
+    </div>
+    <!--generate cards-->
+    
+    <script src="generate_integral.js"></script>
+    
+    <!--
+    <div class="card" id = "card">
+        <div class="author">
+            Thitiwat Kosolpattanadurong <br>
+            <FONT COLOR="gray">0001</FONT>
+        </div>
+        <div class = "Solved">
+            Unsolved
+        </div>
+        <div class = "Tag">
+        <button>Submit</button>
+        </div>
+        <div class="problem">
+            \( \displaystyle\int \frac{\sqrt{\cot{x}}}{1+\sin{2x}} \, dx \)
+        </div>
+    </div>
+    -->
+    </div>
+    </div>
+    </div>
+</div>
+
+</body>
+</html>

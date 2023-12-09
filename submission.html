@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Init_Integration</title>
+    <link rel = "stylesheet" href = "menubar.css">
+    <link rel = "stylesheet" href = "submission.css">
+    <!--title-->
+    <!--fonts-->
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Noto+Sans+Thai&family=PT+Serif&family=Ubuntu+Mono&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+<!-- Navigation -->
+<header class="header">
+<a href="" class="logo">Init_Integrate</a>
+<input class="menu-btn" type="checkbox" id="menu-btn" />
+<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+<ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="problems.html">Problems</a></li>
+    <li><a href="submission.html">Submission</a></li>
+    <li><a href="#Statistics">Statistics</a></li>
+    <li><a href="#About">About</a></li>
+    <li><a href="#Login">Login</a></li>
+</ul>
+</header>
+<div class="body">
+  <div class="side_tab">
+  <div class="l_side"><h2><div id="problem_id">Problem A0001</div></h2><div id="author">Thitiwat Kosolpattanadurong</div><hr> </div>
+  <button class="c_side" onclick = "openTab(event, 'main_tab')" id="b_statement">Statement</button>
+  <button class="c_side" onclick = "openTab(event, 'my_submission')" id="b_submission">My Submission</button>
+  <button class="c_side" onclick = "openTab(event, 'my_solution')" id="b_solution">Solution</button>
+
+  <div class="l_side"><hr> Result <br>
+  <div class="progress-bar"></div><br>
+  <!--<div class="check"></div> Expression check<br>-->
+  </div>
+
+  </div>
+  <div class="sub_tabcontent" id="main_tab">
+  Evaluate
+  <label type="text" id="integrate_display">Display</label><br>
+  Please make sure to check the rules before submitting the answer.<br>
+  <textarea id="input" placeholder="Input your answer by using \( LaTeX)\ syntax. Noted that natural log of \(x)\ should be written as \ln(x), not \ln{x}" rows="5" cols="50"></textarea>
+  <button id="s_submit">Submit</button>
+
+  
+  </div>
+  <div  class="sub_tabcontent" id="my_submission">
+
+  <div class="hcard">
+    Past submissions
+  </div>
+  </div>
+
+
+  <div  class="sub_tabcontent" id="my_solution">
+    Coming soon
+  </div>
+  
+</div>
+<script src="sub_2.js"></script>
+<script type="module" src = submission.js></script>
+</body>
+</html>
